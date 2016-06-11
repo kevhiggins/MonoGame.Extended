@@ -17,8 +17,8 @@ namespace MonoGame.Extended.ViewportAdapters
 
         public override int ViewportWidth => Window.ClientBounds.Width;
         public override int ViewportHeight => Window.ClientBounds.Height;
-        public override int VirtualWidth => Window.ClientBounds.Width;
-        public override int VirtualHeight => Window.ClientBounds.Height;
+        public override float VirtualWidth => Window.ClientBounds.Width;
+        public override float VirtualHeight => Window.ClientBounds.Height;
 
         public override Matrix GetScaleMatrix()
         {

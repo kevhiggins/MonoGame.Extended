@@ -6,15 +6,15 @@ namespace MonoGame.Extended.ViewportAdapters
 {
     public class ScalingViewportAdapter : ViewportAdapter
     {
-        public ScalingViewportAdapter(GraphicsDevice graphicsDevice, int virtualWidth, int virtualHeight) 
+        public ScalingViewportAdapter(GraphicsDevice graphicsDevice, float virtualWidth, float virtualHeight) 
             : base(graphicsDevice)
         {
             VirtualWidth = virtualWidth;
             VirtualHeight = virtualHeight;
         }
 
-        public override int VirtualWidth { get; }
-        public override int VirtualHeight { get; }
+        public override float VirtualWidth { get; }
+        public override float VirtualHeight { get; }
         public override int ViewportWidth => GraphicsDevice.Viewport.Width;
         public override int ViewportHeight => GraphicsDevice.Viewport.Height;
 

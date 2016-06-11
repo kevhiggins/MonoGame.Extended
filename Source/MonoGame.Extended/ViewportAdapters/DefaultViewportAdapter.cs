@@ -14,8 +14,8 @@ namespace MonoGame.Extended.ViewportAdapters
             _graphicsDevice = graphicsDevice;
         }
 
-        public override int VirtualWidth => _graphicsDevice.Viewport.Width;
-        public override int VirtualHeight => _graphicsDevice.Viewport.Height;
+        public override float VirtualWidth => _graphicsDevice.Viewport.Width;
+        public override float VirtualHeight => _graphicsDevice.Viewport.Height;
         public override int ViewportWidth => _graphicsDevice.Viewport.Width;
         public override int ViewportHeight => _graphicsDevice.Viewport.Height;
 
