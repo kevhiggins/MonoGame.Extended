@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended.Shapes;
 
 // ReSharper disable once CheckNamespace
 namespace MonoGame.Extended.ViewportAdapters
@@ -14,14 +15,14 @@ namespace MonoGame.Extended.ViewportAdapters
         public GraphicsDevice GraphicsDevice { get; }
         public Viewport Viewport => GraphicsDevice.Viewport;
 
-        public abstract int VirtualWidth { get; }
-        public abstract int VirtualHeight { get; }
+        public abstract float VirtualWidth { get; }
+        public abstract float VirtualHeight { get; }
         public abstract int ViewportWidth { get; }
         public abstract int ViewportHeight { get; }
         public abstract Matrix GetScaleMatrix();
 
-        public Rectangle BoundingRectangle => new Rectangle(0, 0, VirtualWidth, VirtualHeight);
-        public Point Center => BoundingRectangle.Center;
+        public RectangleF BoundingRectangle => new RectangleF(0, 0, VirtualWidth, VirtualHeight);
+        public Point Center => BoundingRectangle.Center.ToPoint();
 
         public Point PointToScreen(Point point)
         {

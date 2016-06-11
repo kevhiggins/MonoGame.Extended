@@ -30,7 +30,7 @@ namespace MonoGame.Extended.ViewportAdapters
         /// Note: If you're using DirectX please use the other constructor due to a bug in MonoGame.
         /// https://github.com/mono/MonoGame/issues/4018
         /// </summary>
-        public BoxingViewportAdapter(GameWindow window, GraphicsDevice graphicsDevice, int virtualWidth, int virtualHeight, int horizontalBleed, int verticalBleed)
+        public BoxingViewportAdapter(GameWindow window, GraphicsDevice graphicsDevice, float virtualWidth, float virtualHeight, int horizontalBleed, int verticalBleed)
             : base(graphicsDevice, virtualWidth, virtualHeight) {
             _window = window;
             window.ClientSizeChanged += OnClientSizeChanged;
@@ -43,7 +43,7 @@ namespace MonoGame.Extended.ViewportAdapters
         /// Note: If you're using DirectX please use the other constructor due to a bug in MonoGame.
         /// https://github.com/mono/MonoGame/issues/4018
         /// </summary>
-        public BoxingViewportAdapter(GameWindow window, GraphicsDevice graphicsDevice, int virtualWidth, int virtualHeight)
+        public BoxingViewportAdapter(GameWindow window, GraphicsDevice graphicsDevice, float virtualWidth, float virtualHeight)
             : this(window, graphicsDevice, virtualWidth, virtualHeight, 0, 0) {
         }
 
